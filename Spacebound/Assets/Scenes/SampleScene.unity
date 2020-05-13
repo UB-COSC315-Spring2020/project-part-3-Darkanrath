@@ -277,7 +277,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1267449563}
     m_Modifications:
     - target: {fileID: 3533073544153496615, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
@@ -302,17 +302,17 @@ PrefabInstance:
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
@@ -521,7 +521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &308575885
 BoxCollider2D:
@@ -7367,6 +7367,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &841467505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
+    type: 3}
+  m_PrefabInstance: {fileID: 292757059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &880732083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7613,7 +7619,7 @@ RectTransform:
   - {fileID: 202127889}
   - {fileID: 1073622989}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8065,7 +8071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267449562
 GameObject:
@@ -8095,8 +8101,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1138303619}
+  - {fileID: 841467505}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1342092493
 GameObject:
@@ -8358,7 +8365,7 @@ Transform:
   - {fileID: 1509957871}
   - {fileID: 1342092495}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1418353891
 GameObject:
@@ -8437,7 +8444,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &1418353895
 RectTransform:
@@ -8456,7 +8463,7 @@ RectTransform:
   - {fileID: 418341035}
   - {fileID: 1769970358}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8703,7 +8710,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509957869
 GameObject:
@@ -8849,7 +8856,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756044124
 GameObject:
@@ -8956,7 +8963,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: eb24e98eb221228469b24b216a1847c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8982,7 +8989,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 1792321528}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1756044129
 MonoBehaviour:
@@ -9174,7 +9181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9519,17 +9526,17 @@ PrefabInstance:
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3533073544153496614, guid: a3449086d7eec854e923b605be70888d,
         type: 3}
