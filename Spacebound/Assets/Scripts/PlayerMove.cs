@@ -22,7 +22,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float rayDist;
 
-    // Update is called once per frame
     void Update()
     {
         float horAxis = Input.GetAxis("Horizontal");

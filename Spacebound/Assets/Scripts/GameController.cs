@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-
+    // If player has certain tools, and if they are equipped
     bool hasPickaxe = false;
     bool hasAxe = false;
     bool hasSword = false;
@@ -20,10 +20,12 @@ public class GameController : MonoBehaviour
     bool harvestWood = false;
     bool harvestCoal = false;
 
+    // Level of tools; Determines what can be harvested and the damage
     int pickaxeLevel = 0;
     int axeLevel = 0;
     int swordLevel = 0;
 
+    // Amount of resources the player has
     int coalAmt = 0;
     int woodAmt = 0;
     int ironAmt = 0;
@@ -35,10 +37,12 @@ public class GameController : MonoBehaviour
     public Text interactableText;
     string interaction;
 
+    // Hotbar image slots
     public GameObject swordSlotImage;
     public GameObject axeSlotImage;
     public GameObject pickaxeSlotImage;
 
+    // Iron tool images
     public Sprite ironAxe;
     public Sprite ironSword;
     public Sprite ironPickaxe;
@@ -100,16 +104,14 @@ public class GameController : MonoBehaviour
             pickaxeEquipped = false;
             equippedItem.GetComponent<SpriteRenderer>().sprite = ironSword;
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && hasPickaxe == true)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && hasPickaxe == true)
         {
             pickaxeEquipped = true;
             axeEquipped = false;
             swordEquipped = false;
             equippedItem.GetComponent<SpriteRenderer>().sprite = ironPickaxe;
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3) && hasAxe == true)
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && hasAxe == true)
         {
             axeEquipped = true;
             swordEquipped = false;
@@ -117,6 +119,7 @@ public class GameController : MonoBehaviour
             equippedItem.GetComponent<SpriteRenderer>().sprite = ironAxe;
         }
 
+        // Trigger for harvesting materials
         if (Input.GetMouseButtonDown(0))
         {
             if (harvestWood == true)
@@ -132,11 +135,13 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Placeholder section for future inventory system
     private void Inventory()
     {
         
     }
 
+    // Harvests wood
     public void HarvestWood()
     {
 
@@ -144,11 +149,12 @@ public class GameController : MonoBehaviour
         {
             woodAmt += 3;
             wood.text = "" + woodAmt;
-            Debug.Log("Harvested Wood");
         }
 
     }
 
+    // Detects collisions for interactables (doors, items, etc.)
+    // Detects collisions for harvestables (trees, coal, etc.)
     private void OnTriggerEnter2D(Collider2D other)
     {
         Interactables(other.tag);
@@ -156,15 +162,16 @@ public class GameController : MonoBehaviour
         Harvestable(other.tag);
     }
 
+    // Resets certain variables upon leaving trigger colliders
     private void OnTriggerExit2D(Collider2D other)
     {
         interactableText.text = "";
         interaction = "";
 
         harvestWood = false;
-        Debug.Log("No more wood");
     }
 
+    // Based on the tag of the item, do X code
     private void Interactables(string interactable)
     {
         if (interactable == "ironaxe")
@@ -184,12 +191,12 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Based on the tag of the harvestable object, allow X type of harvesting
     public void Harvestable (string type)
     {
         if (type == "wood")
         {
             harvestWood = true;
-            Debug.Log("Wood");
         }
     }
 }
